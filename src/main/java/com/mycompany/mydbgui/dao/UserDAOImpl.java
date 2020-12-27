@@ -13,7 +13,7 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 public class UserDAOImpl implements UserDAO {
-   private Connection dbConnection;
+   private final Connection dbConnection;
    private PreparedStatement preStat;
 
     public UserDAOImpl() {
@@ -35,8 +35,8 @@ public class UserDAOImpl implements UserDAO {
             var isPresent = resultSet.next();
             System.out.println("UserName = " + resultSet.getString(1));
            return isPresent;
-        } catch (SQLException throwables) {
-            Logger.getLogger(UserDAOImpl.class.getName()).info(throwables.getMessage());
+        } catch (SQLException e) {
+            Logger.getLogger(UserDAOImpl.class.getName()).info(e.getMessage());
         }
         return false;
     }
@@ -85,8 +85,8 @@ public class UserDAOImpl implements UserDAO {
             var resultSet = preStat.executeQuery();
             resultSet.next();
             return Optional.of(new User(resultSet.getString(1),resultSet.getString(2)));
-        } catch (SQLException throwables) {
-            Logger.getLogger(UserDAOImpl.class.getName()).info(throwables.getMessage());
+        } catch (SQLException e) {
+            Logger.getLogger(UserDAOImpl.class.getName()).info(e.getMessage());
         }
 
         return Optional.empty();

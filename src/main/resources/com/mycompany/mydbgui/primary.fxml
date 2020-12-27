@@ -7,27 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mydbgui.PrimaryController">
-   <children>
-      <Button fx:id="logInButton" layoutX="238.0" layoutY="208.0" mnemonicParsing="false" onAction="#onLoginAction" prefHeight="25.0" prefWidth="60.0" text="Login" />
-      <Button fx:id="registerButton" layoutX="238.0" layoutY="246.0" mnemonicParsing="false" onAction="#onRegisterButtonAction" text="Register" />
-      <TextField fx:id="userNameTextfield" layoutX="194.0" layoutY="83.0" />
-      <PasswordField fx:id="passwordTextfield" layoutX="194.0" layoutY="132.0" />
-      <Label layoutX="126.0" layoutY="86.0" prefHeight="19.0" prefWidth="66.0" text="User Name">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="126.0" layoutY="135.0" prefHeight="19.0" prefWidth="66.0" text=" Password">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <Label fx:id="statusLabel" layoutX="146.0" layoutY="307.0" prefHeight="36.0" prefWidth="281.0" text=" ">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button fx:id="logOutButton" layoutX="482.0" layoutY="14.0" mnemonicParsing="false" onAction="#onlogoutAction" text="Log out" />
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="560.0" style="-fx-background-color: lightcyan" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mydbgui.controller.PrimaryController">
+
+   <Button fx:id="logInButton" layoutX="238.0" layoutY="205.0" mnemonicParsing="false" onAction="#onLoginAction" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: deepskyblue" text="Login" />
+   <Button fx:id="registerButton" layoutX="238.0" layoutY="246.0" mnemonicParsing="false" onAction="#onRegisterButtonAction" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: lightseagreen" text="Register" />
+   <TextField fx:id="userNameTextfield" layoutX="194.0" layoutY="83.0" promptText="User Name" style="-fx-background-color: transparent;         -fx-border-color: #0598ff;         -fx-border-width: 0px 0px 2px 0px;          " />
+   <PasswordField fx:id="passwordTextfield" layoutX="194.0" layoutY="132.0" promptText="Password" style="       -fx-background-color: transparent;         -fx-border-color: #0598ff;         -fx-border-width: 0px 0px 2px 0px         " />
+   <Label fx:id="statusLabel" layoutX="83.0" layoutY="307.0" prefHeight="36.0" prefWidth="427.0" text=" " textAlignment="CENTER">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="logOutButton" layoutX="482.0" layoutY="14.0" mnemonicParsing="false" onAction="#onlogoutAction" style="-fx-background-color: lightcoral;" text="Log out" />
 </AnchorPane>
